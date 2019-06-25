@@ -1,5 +1,6 @@
 from map_objects.tile import Tile
 
+
 class GameMap:
     def __init__(self, width, height):
         self.width = width
@@ -17,3 +18,9 @@ class GameMap:
         tiles[32][22].block_sight = True
 
         return tiles
+
+    def is_blocked(self, x, y):
+        if self.tiles[x][y].blocked:
+            return True
+
+        return False
