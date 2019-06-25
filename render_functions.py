@@ -9,7 +9,7 @@ def render_all(con, entities, game_map, screen_width, screen_height, colours):
             if wall:
                 libtcod.console_set_char_background(con, x, y, colours.get('dark_wall'), libtcod.BKGND_SET)
             else:
-                libtcod.console_set_char_background(con, x, y, colours.get('dark_floor'), libtcod.BKGND_SET)
+                libtcod.console_set_char_background(con, x, y, colours.get('dark_ground'), libtcod.BKGND_SET)
 
     # Draw all entities in the list
     for entity in entities:
